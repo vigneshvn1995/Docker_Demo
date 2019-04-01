@@ -3,8 +3,7 @@ node
   stage('Initialize')
    {
     def dockerHome = tool 'myDocker'
-    sh "echo $dockerHome"
-    sh "ls $dockerHome/bin/"
+    env.PATH = "${dockerHome}/bin:${env.PATH}"
    }
   stage('Checkout')
   {
@@ -15,7 +14,7 @@ node
   {
     echo "hello"
     
-    sh "docker build -t ubuntudemo ."
+    sh "docker info"
   }
 
 }
