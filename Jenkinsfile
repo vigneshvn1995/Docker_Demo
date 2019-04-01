@@ -8,7 +8,7 @@ node
   stage('Image build')
   {
     echo "hello"
-    sh "docker info"
+    sh "docker ps"
   }
 
 }
