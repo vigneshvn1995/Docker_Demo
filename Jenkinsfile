@@ -13,7 +13,7 @@ node
   stage('Image build')
   {
     echo "hello"
-    sh "docker ps"
+    sh "docker build -t ubuntudemo ."
   }
 
 }
