@@ -13,7 +13,7 @@ node
   stage('Image build')
   {
     echo "hello"
-    sh "docker build -t ubuntudemo ."
+    sh "docker build -t ubuntudemo  -t ubuntudemo --pull --no-cache ."
   }
 
 }
