@@ -13,7 +13,7 @@ node
   stage('Image build')
   {
     echo "hello"
-    sh "sudo chmod 777 /var/run/docker.sock"
+    sh "sudo usermod -a -G docker jenkins"
     sh "docker build -t ubuntudemo ."
   }
 
