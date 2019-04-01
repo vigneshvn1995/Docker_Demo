@@ -4,6 +4,7 @@ node
    {
     def dockerHome = tool 'myDocker'
     env.PATH = "${dockerHome}/bin:${env.PATH}"
+    sh "docker info"
    }
   stage('Checkout')
   {
@@ -14,7 +15,6 @@ node
   {
     echo "hello"
     
-    sh "docker info"
   }
 
 }
